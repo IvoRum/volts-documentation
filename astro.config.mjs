@@ -11,7 +11,7 @@ export default defineConfig({
       src: './src/assets/ion-logo.svg'
     },
     social: {
-      github: 'https://github.com/comet-analytics/ion-theme'
+      github: 'https://github.com/IvoRum/volts-documentation'
     },
     sidebar: [{
       label: '[home] Home',
