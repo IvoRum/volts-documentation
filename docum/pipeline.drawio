@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2024-08-02T11:27:38.200Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" etag="rMHdeUz7KbvakSgoP7lx" version="24.2.0" type="device">
+  <diagram name="Page-1" id="9P_V2SWZUG2f57F_m8PW">
+    <mxGraphModel dx="2208" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="430" width="630" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="210" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="440" width="320" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-1" target="ICZF0N0q2YGgt5ZZ0KGq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-1" value="Source code version control&lt;div&gt;(GitHub)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-2" target="ICZF0N0q2YGgt5ZZ0KGq-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-2" value="Build System + Build tools&lt;div&gt;&amp;nbsp;(GitHub Actions)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-5" target="ICZF0N0q2YGgt5ZZ0KGq-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-5" value="Tests and code&amp;nbsp;quality&lt;div&gt;(Sonar Qube)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-6" target="ICZF0N0q2YGgt5ZZ0KGq-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-6" value="Build artefact&lt;div&gt;(Docker image)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-7" value="Deploy artefact&lt;div&gt;(Docker container)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-10" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Jenkins&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="630" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-12" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;GitHub&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-18" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Ubuntu Server&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="460" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-19" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="440" width="150" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-20" value="Sonar Qube" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-21" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Docker&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-22" value="Service&lt;div&gt;deployed&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-29" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-5" target="ICZF0N0q2YGgt5ZZ0KGq-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="490" as="sourcePoint" />
+            <mxPoint x="330" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ICZF0N0q2YGgt5ZZ0KGq-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ICZF0N0q2YGgt5ZZ0KGq-7" target="ICZF0N0q2YGgt5ZZ0KGq-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
