@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "9f25436e-6441-47dd-b789-8c97e48dcbe9",
+		"name": "Server calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28656173"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the JSON response body\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Check if the access token is present\r",
+							"if (response.access_token) {\r",
+							"    // Set the access token to a global variable\r",
+							"    pm.globals.set(\"access_token\", response.access_token);\r",
+							"    console.log(\"Access token set to global variable\");\r",
+							"} else {\r",
+							"    console.error(\"Access token not found in response\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"plamen@mail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/vi/auth/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"vi",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register With company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Ivaylo\",\r\n    \"lastName\":\"Rumenov\",\r\n    \"companyId\":1,\r\n    \"telephoneNumber\":\"08855266\",\r\n    \"email\":\"ivo11@mail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vi/auth/register/with/company",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vi",
+						"auth",
+						"register",
+						"with",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Plamen\",\r\n    \"lastName\":\"Iliev\",\r\n    \"telephoneNumber\":\"08855266\",\r\n    \"email\":\"plamen@mail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vi/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vi",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create el meter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyId\":1,\r\n    \"meterAddress\":0,\r\n    \"meterName\":\"08855266\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/elmeter/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"elmeter",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Electric meter no data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/elmeter",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"elmeter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Elmer address list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_name\":\"Markeli\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/elmeter/company/address/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"elmeter",
+						"company",
+						"address",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Elmer Data last",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":2,\r\n    \"company_name\":\"Markeli\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/elmeter/data/last",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"elmeter",
+						"data",
+						"last"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
